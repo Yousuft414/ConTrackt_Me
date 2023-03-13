@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Job Submission Form"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="42dp" />
+
+    <EditText
+        android:id="@+id/editTextTextPersonName"
+        android:layout_width="258dp"
+        android:layout_height="31dp"
+        android:background="@color/material_dynamic_neutral90"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="137dp" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Job Name"
+        tools:layout_editor_absoluteX="77dp"
+        tools:layout_editor_absoluteY="110dp" />
+
+    <EditText
+        android:id="@+id/editTextTextMultiLine"
+        android:layout_width="259dp"
+        android:layout_height="129dp"
+        android:background="@color/material_dynamic_neutral90"
+        android:ems="10"
+        android:gravity="start|top"
+        android:inputType="textMultiLine"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="205dp" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Job Description"
+        tools:layout_editor_absoluteX="76dp"
+        tools:layout_editor_absoluteY="179dp" />
+
+    <EditText
+        android:id="@+id/editTextNumber2"
+        android:layout_width="95dp"
+        android:layout_height="52dp"
+        android:layout_marginEnd="76dp"
+        android:background="@color/material_dynamic_neutral90"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:layout_editor_absoluteY="375dp" />
+
+    <EditText
+        android:id="@+id/editTextNumber"
+        android:layout_width="94dp"
+        android:layout_height="52dp"
+        android:background="@color/material_dynamic_neutral90"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintEnd_toStartOf="@+id/editTextNumber2"
+        app:layout_constraintHorizontal_bias="0.527"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="375dp" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Budget Range"
+        tools:layout_editor_absoluteX="76dp"
+        tools:layout_editor_absoluteY="346dp" />
+
+    <Spinner
+        android:id="@+id/planets_spinner"
+        android:layout_width="258dp"
+        android:layout_height="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="468dp" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Contractor Preference (Optional)"
+        tools:layout_editor_absoluteX="76dp"
+        tools:layout_editor_absoluteY="441dp" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cancel"
+        app:layout_constraintEnd_toStartOf="@+id/button2"
+        app:layout_constraintHorizontal_bias="0.546"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="643dp" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="111dp"
+        android:layout_height="66dp"
+        android:layout_marginEnd="76dp"
+        android:background="@color/design_default_color_primary"
+        android:text="Submit"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:layout_editor_absoluteY="633dp" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="182dp"
+        android:layout_height="39dp"
+        android:text="Select Image(s)"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.336"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="511dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
