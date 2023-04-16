@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "460620382055",
+    "project_id": "contracktme",
+    "storage_bucket": "contracktme.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:460620382055:android:93424f8d4b9209e71939c2",
+        "android_client_info": {
+          "package_name": "com.example.contrackt_me"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "460620382055-2djhfr8jovmph4958nqftdlrmelb3lt1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCLb9excpXVt6n4o-GFVILDhGEdWUovCdk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "460620382055-2djhfr8jovmph4958nqftdlrmelb3lt1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
