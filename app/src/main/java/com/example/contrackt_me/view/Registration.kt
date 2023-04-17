@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.text.TextUtils
 import android.widget.Button
 import android.widget.EditText
+import android.widget.TextView
 import android.widget.Toast
 import androidx.annotation.NonNull
 import com.example.contrackt_me.R
@@ -25,6 +26,14 @@ class Registration : AppCompatActivity() {
         val button: Button =findViewById(R.id.btnLogin)
 
         val fAuth: FirebaseAuth = FirebaseAuth.getInstance()
+
+        val textView: TextView = findViewById(R.id.lnkLogin)
+        textView.setOnClickListener {
+            //Toast.makeText(this, "Test click", Toast.LENGTH_SHORT).show()
+            startActivity(Intent(this, MainActivity::class.java))
+            //val intent = Intent(this, Registration::class.java)
+            //startActivity(intent)
+        }
 
         if(fAuth.getCurrentUser() != null) {
             val intent = Intent(this, MainActivity::class.java)
