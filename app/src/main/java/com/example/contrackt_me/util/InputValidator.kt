@@ -16,26 +16,31 @@ class InputValidator {
             val errors = mutableListOf<String>()
 
             if (title.isBlank()) {
-                errors.add("Please enter a title.")
+                errors.add("Please enter a job title.")
             }
             if (description.isBlank()) {
-                errors.add("Please enter a description.")
+                errors.add("Please enter a job description.")
             }
             if (minBudget.isBlank()) {
                 errors.add("Please enter a minimum budget.")
-            } else if (minBudget.toFloat() > maxBudget.toFloat()) {
-                errors.add("Min budget cannot be greater than max budget.")
+            } else if (maxBudget.isNotBlank() && minBudget.toFloat() > maxBudget.toFloat()) {
+                errors.add("Minimum budget cannot be greater than maximum budget.")
             }
             if (maxBudget.isBlank()) {
-                errors.add("Please enter a maximum budget")
-            } else if (maxBudget.toFloat() < minBudget.toFloat()) {
-                errors.add("max budget cannot be lower than min budget.")
+                errors.add("Please enter a maximum budget.")
             }
-            if (contactInfoType == "Email" && email.isEmpty()) {
-                errors.add("Please enter email.")
-            }
-            if (contactInfoType == "Phone" && phone.isEmpty()) {
-                errors.add("Please enter phone number.")
+            if (contactInfoType == "Email") {
+                if (email.isBlank()) {
+                    errors.add("Please enter email.")
+                } else if (!android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
+                    errors.add("Please enter a valid email address.")
+                }
+            } else if (contactInfoType == "Phone") {
+                if (phone.isBlank()) {
+                    errors.add("Please enter phone number.")
+                } else if (!android.util.Patterns.PHONE.matcher(phone).matches()) {
+                    errors.add("Please enter a valid phone number.")
+                }
             }
             return errors
         }
