@@ -4,4 +4,24 @@
         <item>Email</item>
         <item>Phone</item>
     </string-array>
+
+    <string-array name="duration_units">
+        <item>Unsure</item>
+        <item>Hours</item>
+        <item>Days</item>
+        <item>Weeks</item>
+    </string-array>
+
+    <string-array name="certificates">
+        <item>None</item>
+        <item>Electrician (Construction and Maintenance) - Certificate of Qualification</item>
+        <item>Plumber - Certificate of Qualification</item>
+        <item>Welder - Certificate of Qualification</item>
+        <item>Carpenter - Certificate of Qualification</item>
+        <item>Refrigeration and Air Conditioning Mechanic - Certificate of Qualification</item>
+        <item>Automotive Service Technician - Certificate of Qualification</item>
+        <item>Millwright - Certificate of Qualification</item>
+        <item>Industrial Electrician - Certificate of Qualification</item>
+        <item>Heavy Duty Equipment Technician - Certificate of Qualification</item>
+    </string-array>
 </resources>

@@ -1,14 +1,14 @@
 package com.example.contrackt_me.util
 
-import com.example.contrackt_me.R
-
 class InputValidator {
     companion object {
         fun validateInputs(
             title: String,
             description: String,
-            minBudget: String,
-            maxBudget: String,
+            minHourly: String,
+            maxHourly: String,
+            duration: String,
+            durationUnits: String,
             contactInfoType: String,
             email: String,
             phone: String
@@ -21,13 +21,20 @@ class InputValidator {
             if (description.isBlank()) {
                 errors.add("Please enter a job description.")
             }
-            if (minBudget.isBlank()) {
-                errors.add("Please enter a minimum budget.")
-            } else if (maxBudget.isNotBlank() && minBudget.toFloat() > maxBudget.toFloat()) {
-                errors.add("Minimum budget cannot be greater than maximum budget.")
+            if (minHourly.isBlank()) {
+                errors.add("Please enter a minimum hourly rate.")
+            } else if (maxHourly.isNotBlank() && minHourly.toFloat() > maxHourly.toFloat()) {
+                errors.add("Minimum rate cannot be greater than maximum rate.")
             }
-            if (maxBudget.isBlank()) {
-                errors.add("Please enter a maximum budget.")
+            if (maxHourly.isBlank()) {
+                errors.add("Please enter a maximum hourly rate.")
+            }
+            if (durationUnits != "Unsure") {
+                if (duration.isBlank()){
+                    errors.add("Please enter a duration approximate.")
+                } else if (duration.toInt() <= 0) {
+                    errors.add("Please enter a valid job duration.")
+                }
             }
             if (contactInfoType == "Email") {
                 if (email.isBlank()) {
