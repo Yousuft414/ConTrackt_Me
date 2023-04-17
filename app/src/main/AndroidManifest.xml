@@ -15,6 +15,8 @@
             android:name=".view.Registration"
             android:exported="false" />
         <activity android:name=".view.JobRequestActivity"/>
+        <activity android:name=".view.HomeActivity"/>
+        <activity android:name=".view.JobRequestHomeActivity"/>
         <activity
             android:name=".view.MainActivity"
             android:exported="true">
