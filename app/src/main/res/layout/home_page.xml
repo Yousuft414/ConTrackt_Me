@@ -20,6 +20,7 @@
         android:text="Login and Registration"/>
 
     <Button
+        android:id="@+id/filter_compare_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Filter and Compare"/>
