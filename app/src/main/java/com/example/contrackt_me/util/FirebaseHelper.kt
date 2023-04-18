@@ -1,7 +1,10 @@
 package com.example.contrackt_me.util
 
 import com.example.contrackt_me.model.JobRequest
+import com.google.firebase.database.DataSnapshot
+import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.database.ValueEventListener
 
 class FirebaseHelper private constructor() {
     private val database = FirebaseDatabase.getInstance(Constants.DB_BASE_URL)
@@ -13,6 +16,25 @@ class FirebaseHelper private constructor() {
     fun submitJobRequest(jobRequest: JobRequest) {
         val newJobRequestInstance = jobRequestsRef.push()
         newJobRequestInstance.setValue(jobRequest)
+    }
+
+    fun getJobRequests(callback: (List<JobRequest>) -> Unit) {
+        val databaseReference = FirebaseDatabase.getInstance().getReference("job-requests")
+
+        databaseReference.addListenerForSingleValueEvent(object : ValueEventListener {
+            override fun onDataChange(dataSnapshot: DataSnapshot) {
+                val jobRequests = mutableListOf<JobRequest>()
+
+                for (childSnapshot in dataSnapshot.children) {
+                    val jobRequest = childSnapshot.getValue(JobRequest::class.java)
+                    jobRequests.add(jobRequest!!)
+                }
+
+                callback(jobRequests)
+            }
+
+            override fun onCancelled(databaseError: DatabaseError) {}
+        })
     }
 
     // todo: add methods for users

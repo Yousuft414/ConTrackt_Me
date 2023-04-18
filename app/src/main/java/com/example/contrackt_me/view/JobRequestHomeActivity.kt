@@ -18,7 +18,8 @@ class JobRequestHomeActivity : AppCompatActivity() {
         createJobRequestButton = findViewById(R.id.create_job_request_button)
 
         viewJobRequestsButton.setOnClickListener {
-            // todo: create job viewing
+            val intent = Intent(this, ViewJobRequestsActivity::class.java)
+            startActivity(intent)
         }
         createJobRequestButton.setOnClickListener {
             val intent = Intent(this, JobRequestActivity::class.java)
