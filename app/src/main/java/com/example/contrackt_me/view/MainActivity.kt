@@ -24,10 +24,7 @@ class MainActivity : AppCompatActivity() {
 
         val textView: TextView = findViewById(R.id.lnkRegister)
         textView.setOnClickListener {
-            //Toast.makeText(this, "Test click", Toast.LENGTH_SHORT).show()
             startActivity(Intent(this, Registration::class.java))
-            //val intent = Intent(this, Registration::class.java)
-            //startActivity(intent)
         }
 
 
@@ -48,6 +45,7 @@ class MainActivity : AppCompatActivity() {
             fAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener(this) { task ->
                 if (task.isSuccessful()) {
                     Toast.makeText(this, "User logged in successfully", Toast.LENGTH_SHORT).show()
+                    startActivity(Intent(this, HomeActivity::class.java))
                 } else {
                     Toast.makeText(this, "Error has occurred!", Toast.LENGTH_SHORT).show()
                 }
