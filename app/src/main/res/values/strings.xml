@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">ConTrackt_Me</string>
+    <string name="title_activity_maps">MapsActivity</string>
 </resources>

@@ -24,7 +24,7 @@ class HomeActivity : AppCompatActivity() {
 
         // Set up an OnClickListener for the Filter and Compare button
         filterCompareButton.setOnClickListener {
-            val intent = Intent(this, contractorList::class.java)
+            val intent = Intent(this, TrackingLocationActivity::class.java)
             startActivity(intent)
         }
     }
