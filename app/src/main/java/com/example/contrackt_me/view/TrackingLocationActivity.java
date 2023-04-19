@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.Manifest;
 import android.content.Context;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.location.Address;
 import android.location.Geocoder;
@@ -27,7 +28,7 @@ import java.util.Locale;
 
 public class TrackingLocationActivity extends AppCompatActivity {
 
-    Button button;
+    Button button, filterButton;
     TextView textView;
 
     @Override
@@ -37,6 +38,7 @@ public class TrackingLocationActivity extends AppCompatActivity {
 
         button = findViewById(R.id.button2);
         textView = findViewById(R.id.textView);
+        filterButton = findViewById(R.id.filter_button);
 
         button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -54,6 +56,14 @@ public class TrackingLocationActivity extends AppCompatActivity {
                         Toast.makeText(TrackingLocationActivity.this, "Not Found!", Toast.LENGTH_SHORT).show();
                     }
                 }
+            }
+        });
+
+        filterButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), contractorList.class);
+                startActivity(intent);
             }
         });
     }
