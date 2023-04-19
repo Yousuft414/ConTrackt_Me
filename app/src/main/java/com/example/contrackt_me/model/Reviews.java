@@ -1,4 +1,4 @@
-package com.example.contrackt_me.view;
+package com.example.contrackt_me.model;
 
 public class Reviews {
 

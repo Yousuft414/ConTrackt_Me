@@ -1,4 +1,6 @@
-package com.example.contrackt_me.view;
+package com.example.contrackt_me.model;
+
+import com.example.contrackt_me.model.Reviews;
 
 import java.util.List;
 
@@ -7,7 +9,7 @@ public class Contractor {
     String Name, Quote, PostalCode, Address, PhoneNumber, Email;
     List<String> Keywords;
     float Rating;
-    Reviews [] reviews;
+    Reviews[] reviews;
 
     public Contractor() {
     }

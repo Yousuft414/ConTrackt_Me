@@ -1,4 +1,4 @@
-package com.example.contrackt_me.view;
+package com.example.contrackt_me.model;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -40,6 +40,7 @@ public class ContractorAdapter extends RecyclerView.Adapter<ContractorAdapter.My
         holder.Name.setText(contractor.Name);
         holder.Email.setText(contractor.Email);
         holder.Quote.setText(contractor.Quote);
+        holder.Rating.setText(String.valueOf(contractor.Rating));
 
     }
 
@@ -50,7 +51,7 @@ public class ContractorAdapter extends RecyclerView.Adapter<ContractorAdapter.My
 
     public static class MyViewHolder extends RecyclerView.ViewHolder{
 
-        TextView Name, Email, Quote;
+        TextView Name, Email, Quote, Rating;
 
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -58,6 +59,7 @@ public class ContractorAdapter extends RecyclerView.Adapter<ContractorAdapter.My
             Name = itemView.findViewById(R.id.contractor_name);
             Email = itemView.findViewById(R.id.contractor_email);
             Quote = itemView.findViewById(R.id.contractor_Quote);
+            Rating = itemView.findViewById(R.id.contractor_Rating);
         }
     }
 }

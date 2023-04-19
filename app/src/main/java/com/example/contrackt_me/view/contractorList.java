@@ -10,6 +10,8 @@ import android.os.Bundle;
 import android.util.Log;
 
 import com.example.contrackt_me.R;
+import com.example.contrackt_me.model.Contractor;
+import com.example.contrackt_me.model.ContractorAdapter;
 import com.google.firebase.firestore.DocumentChange;
 import com.google.firebase.firestore.EventListener;
 import com.google.firebase.firestore.FirebaseFirestore;

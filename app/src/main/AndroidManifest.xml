@@ -2,9 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
-    <uses-permission android:name="android.permission.INTERNET"/>
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
 
     <application
         android:allowBackup="true"
@@ -16,16 +16,19 @@
         android:theme="@style/Theme.ConTrackt_Me"
         tools:targetApi="31">
         <activity
+            android:name=".view.KeywordSelection"
+            android:exported="false" />
+        <activity
             android:name=".view.contractorList"
             android:exported="false" />
         <activity
             android:name=".view.Registration"
             android:exported="false" />
-        <activity android:name=".view.JobRequestActivity"/>
-        <activity android:name=".view.HomeActivity"/>
-        <activity android:name=".view.JobRequestHomeActivity"/>
-        <activity android:name=".view.ViewJobRequestsActivity"/>
-        <activity android:name=".view.JobRequestDetailActivity"/>
+        <activity android:name=".view.JobRequestActivity" />
+        <activity android:name=".view.HomeActivity" />
+        <activity android:name=".view.JobRequestHomeActivity" />
+        <activity android:name=".view.ViewJobRequestsActivity" />
+        <activity android:name=".view.JobRequestDetailActivity" />
         <activity
             android:name=".view.MainActivity"
             android:exported="true">
