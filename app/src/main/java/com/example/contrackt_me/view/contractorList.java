@@ -19,6 +19,7 @@ import com.google.firebase.firestore.FirebaseFirestoreException;
 import com.google.firebase.firestore.QuerySnapshot;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class contractorList extends AppCompatActivity {
 
@@ -26,12 +27,19 @@ public class contractorList extends AppCompatActivity {
     ArrayList <Contractor> contractorArrayList;
     ContractorAdapter contractorAdapter;
     FirebaseFirestore db;
+    String city;
     ProgressDialog progressDialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_contractor_list);
+
+        Bundle extras = getIntent().getExtras();
+        if (extras != null) {
+            city = extras.getString("City");
+            //The key argument here must match that used in the other activity
+        }
 
         progressDialog = new ProgressDialog(this);
         progressDialog.setCancelable(false);
@@ -68,6 +76,14 @@ public class contractorList extends AppCompatActivity {
 
                         for (DocumentChange documentChange : value.getDocumentChanges()){
                             if(documentChange.getType() == DocumentChange.Type.ADDED){
+                                /*List<String> areas = documentChange.getDocument().toObject(Contractor.class).getAreasServed();
+                                for (String cities: areas
+                                     ) {
+                                    if(cities == city){
+                                        contractorArrayList.add(documentChange.getDocument().toObject(Contractor.class));
+                                    }
+
+                                }*/
                                 contractorArrayList.add(documentChange.getDocument().toObject(Contractor.class));
                             }
                         }

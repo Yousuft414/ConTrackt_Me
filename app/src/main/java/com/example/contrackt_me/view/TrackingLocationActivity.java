@@ -29,6 +29,7 @@ import java.util.Locale;
 public class TrackingLocationActivity extends AppCompatActivity {
 
     Button button, filterButton;
+    String city;
     TextView textView;
 
     @Override
@@ -49,7 +50,7 @@ public class TrackingLocationActivity extends AppCompatActivity {
                     LocationManager locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
                     Location location = locationManager.getLastKnownLocation(LocationManager.NETWORK_PROVIDER);
                     try {
-                        String city = herelocation(location.getLatitude(), location.getLongitude());
+                        city = herelocation(location.getLatitude(), location.getLongitude());
                         textView.setText(city);
                     }catch (Exception e){
                         e.printStackTrace();
@@ -63,6 +64,7 @@ public class TrackingLocationActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), contractorList.class);
+                intent.putExtra("City", city);
                 startActivity(intent);
             }
         });
@@ -76,7 +78,7 @@ public class TrackingLocationActivity extends AppCompatActivity {
                     LocationManager locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
                     Location location = locationManager.getLastKnownLocation(LocationManager.NETWORK_PROVIDER);
                     try {
-                        String city = herelocation(location.getLatitude(), location.getLongitude());
+                        city = herelocation(location.getLatitude(), location.getLongitude());
                         textView.setText(city);
                     }catch (Exception e){
                         e.printStackTrace();

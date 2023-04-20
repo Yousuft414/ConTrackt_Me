@@ -8,13 +8,14 @@ public class Contractor {
 
     String Name, Quote, PostalCode, Address, PhoneNumber, Email;
     List<String> Keywords;
+    List<String> AreasServed;
     float Rating;
     Reviews[] reviews;
 
     public Contractor() {
     }
 
-    public Contractor(String name, String quote, String postalCode, String address, String phoneNumber, String email, List<String> keywords, float rating, Reviews[] reviews) {
+    public Contractor(String name, String quote, String postalCode, String address, String phoneNumber, String email, List<String> keywords, List<String> areasServed,float rating, Reviews[] reviews) {
         Name = name;
         Quote = quote;
         PostalCode = postalCode;
@@ -22,6 +23,7 @@ public class Contractor {
         PhoneNumber = phoneNumber;
         Email = email;
         Keywords = keywords;
+        AreasServed = areasServed;
         Rating = rating;
         this.reviews = reviews;
     }
@@ -80,6 +82,14 @@ public class Contractor {
 
     public void setKeywords(List<String> keywords) {
         Keywords = keywords;
+    }
+
+    public List<String> getAreasServed() {
+        return AreasServed;
+    }
+
+    public void setAreasServed(List<String> areasServed) {
+        AreasServed = areasServed;
     }
 
     public float getRating() {
